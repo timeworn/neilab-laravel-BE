@@ -14,7 +14,6 @@ class InternalTradeBuyList extends Model
         'asset_purchased',
         'buy_amount',
         'buy_address',
-        'sending_address',
         'pay_with',
         'chain_stack',
         'transaction_descrip,tion',
@@ -22,6 +21,6 @@ class InternalTradeBuyList extends Model
         'bank_changes',
         'left_over_profit',
         'total_amount_left',
-        'state',
+        'master_load',
     ];
 }
