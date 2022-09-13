@@ -65,6 +65,7 @@ class RegisterController extends Controller
             $validate = \Validator::make($request->all(),[
                 'firstname'  => ['required', 'string', 'max:50'],
                 'lastname'  => ['required', 'string', 'max:50'],
+                'username'  => ['required', 'string', 'max:50'],
                 'email'     => ['required', 'string', 'email', 'max:50'],
                 'password'  => ['required', 'string', 'min:8'],
             ]);
@@ -78,12 +79,10 @@ class RegisterController extends Controller
                 $user_create = User::create([
                     'first_name' => $request->firstname,
                     'last_name' => $request->lastname,
+                    'username'  => $request->username,
                     'marketing_campain_id'  => 1,
                     'email'     => $request->email,
                     'password'   => Hash::make($request->password),
-                    'whatsapp' => $request->whatsapp,
-                    'boomboomchat' => $request->boomboomchat,
-                    'telegram' => $request->telegram,
                     'user_type' => 'none',
                     'state' => 0,
                 ]);
