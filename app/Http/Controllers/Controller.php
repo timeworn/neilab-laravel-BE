@@ -6,9 +6,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use App\Models\InternalWallet;
-
-
 
 class Controller extends BaseController
 {
@@ -38,21 +35,5 @@ class Controller extends BaseController
     }
     function getBalance($address) {
         return file_get_contents('https://blockchain.info/q/addressbalance/'. $address);
-    }
-
-    public function sendUSDT($from, $to, $amount){
-
-        $wallet_info = InternalWallet::where('wallet_address', $from)->get()->toArray();
-        if($wallet_info > 0){
-            $private_key = $wallet_info[0]['private_key'];
-            $result = exec('node USDTSendServer/sendUSDT.js '.$private_key.','.$to.','.$amount);
-            echo($result);
-        }
-    }
-
-    public function createMarketBuyOrder($symbol, $amount){
-        echo $symbol;
-        echo $amount;
-        exit;
     }
 }

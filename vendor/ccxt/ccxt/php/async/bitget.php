@@ -1892,9 +1892,7 @@ class bitget extends Exchange {
                 if ($price === null) {
                     throw new InvalidOrder($this->id . ' createOrder() requires $price argument for $market buy orders on spot markets to calculate the total $amount to spend ($amount * $price), alternatively set the $createMarketBuyOrderRequiresPrice option to false and pass in the $cost to spend into the $amount parameter');
                 } else {
-                    $amountString = $this->number_to_string($amount);
-                    $priceString = $this->number_to_string($price);
-                    $cost = $this->parse_number(Precise::string_mul($amountString, $priceString));
+                    $cost = $amount * $price;
                     $request['quantity'] = $this->price_to_precision($symbol, $cost);
                 }
             } else {
