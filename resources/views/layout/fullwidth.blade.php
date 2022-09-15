@@ -31,7 +31,6 @@
         </div>
     </div>
 @include('elements.footer-scripts')
-@yield('scripts')
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ZenixadminController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -23,6 +22,7 @@ use App\Http\Controllers\Client\SellController;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,26 +39,18 @@ use App\Http\Controllers\Client\SellController;
 // });
 
 
-    Route::get('/',                     [HomeController::class,'index']);
+    Route::get('/',                     [ZenixadminController::class,'page_login']);
     Route::get('/login',                [ZenixadminController::class,'page_login']);
     Route::get('/logout',               [LoginController::class, 'logout']);
     Route::post('/login_user',          [LoginController::class, 'login']);
     Route::get('/register',             [ZenixadminController::class,'page_register']);
     Route::post('/register_new_user',   [RegisterController::class, 'customRegisterUser']);
 
-    Route::group(['middleware' => ['auth']], function(){
-        Route::get('/kyc',                  [RegisterController::class, 'page_kyc']);
-        Route::get('/agreement',            [RegisterController::class, 'page_agreement']);
-        Route::post('/agreement',            [RegisterController::class, 'agree_terms_conditions']);
-        Route::get('/trainee_video',            [RegisterController::class, 'page_trainee_video']);
-        Route::post('/trainee_video',            [RegisterController::class, 'understood_video']);
-    });
-
     // Admin Routing
-    Route::group(['middleware' => ['isAdmin']], function(){
-        // Route::get('/', function(){
-        //     return redirect('/admin/dashboard');
-        // });
+    Route::group(['middleware' => ['auth', 'isAdmin']], function(){
+        Route::get('/', function(){
+            return redirect('/admin/dashboard');
+        });
         Route::get('/admin/exchangelist',               [AdminExchangeListController::class, "index"]);
         Route::get('/admin/new_exchange_list/{id?}',    [AdminExchangeListcontroller::class, "editExchange"]);
         Route::get('/admin/delete_exchange_list/{id?}', [AdminExchangeListcontroller::class, "deleteExchange"]);
@@ -69,7 +61,6 @@ use App\Http\Controllers\Client\SellController;
         // Admin User list routing
         Route::get('/admin/userlist',                       [AdminUserlistController::class,'index']);
         Route::post('/admin/getUserByID',                   [AdminUserlistController::class,'getUserByID']);
-        Route::post('/admin/assignCampaignId',              [AdminUserlistController::class,'assignCampaignId']);
         Route::post('/admin/changeUserEmail',               [AdminUserlistController::class,'changeUserEmail']);
         Route::post('/admin/changeUserPassword',            [AdminUserlistController::class,'changeUserPassword']);
         Route::get('/admin/change_userstate/{id}/{state}',  [AdminUserlistController::class,'changeUserState']);
@@ -94,8 +85,8 @@ use App\Http\Controllers\Client\SellController;
         Route::get('/admin/marketingcampain', [AdminMarketingCampainController::class,'index']);
         Route::get('/admin/editMarketingCampain/{id?}', [AdminMarketingCampainController::class,'editMarketingCampain']);
         Route::post('/admin/changeMarketingCampainStatusByID', [AdminMarketingCampainController::class,'changeMarketingCampainStatusByID']);
-        Route::get('/admin/previewMarketingCampain/{id}', [AdminMarketingCampainController::class,'previewMarketingCampain']);
-        Route::post('/admin/updateMarketing', [AdminMarketingCampainController::class,'updateMarketing']);
+        Route::get('/admin/marketingcampainview/{id}', [AdminMarketingCampainController::class,'viewCamapinByID']);
+        Route::post('/admin/updateMarketing/{id?}', [AdminMarketingCampainController::class,'updateMarketing']);
 
         Route::get('/admin/internalTradeBuy', [AdminInternalTradeBuyController::class,'index']);
         Route::get('/admin/internalTradeSell', [AdminInternalTradeSellController::class,'index']);
@@ -103,11 +94,10 @@ use App\Http\Controllers\Client\SellController;
     });
     
     // Client Routing
-    Route::group(['middleware' => ['isClient']], function(){
-        // Route::get('/', function(){
-        //     return redirect('/client/dashboard');
-        // });
-    
+    Route::group(['middleware' => ['auth', 'isClient']], function(){
+        Route::get('/', function(){
+            return redirect('/client/dashboard');
+        });
         Route::get('/client/dashboard',     [AdminDashboardController::class,'index']);
 
     });
@@ -115,6 +105,7 @@ use App\Http\Controllers\Client\SellController;
 
     Route::get('/buy_wizard',           [BuyController::class, 'index']);
     Route::post('/buy_crypto',          [BuyController::class, 'buyCrypto']);
+    Route::post('/masterload',          [BuyController::class, 'masterload']);
     Route::get('/sell_wizard',          [SellController::class, 'index']);
     Route::post('/sell_crypto',         [SellController::class, 'sellCrypto']);
     Route::get('/buy_report',           [BuyController::class, 'report']);

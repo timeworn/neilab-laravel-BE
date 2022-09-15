@@ -14,13 +14,14 @@ class InternalTradeBuyList extends Model
         'asset_purchased',
         'buy_amount',
         'buy_address',
+        'sender_address',
         'pay_with',
         'chain_stack',
-        'transaction_descrip,tion',
+        'transaction_description',
         'commision_id',
         'bank_changes',
         'left_over_profit',
         'total_amount_left',
-        'master_load',
+        'state',
     ];
 }

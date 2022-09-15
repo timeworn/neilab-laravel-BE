@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
+class ComposerStaticInita31df1a16318e01f90c16d1edb900431
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -28,6 +28,7 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
+        'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
@@ -48,6 +49,7 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         ),
         'p' => 
         array (
+            'phpseclib\\' => 10,
             'phpDocumentor\\Reflection\\' => 25,
         ),
         'k' => 
@@ -64,6 +66,7 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         array (
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
+            'Web3p\\RLP\\' => 10,
         ),
         'T' => 
         array (
@@ -100,6 +103,7 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'SWeb3\\' => 6,
         ),
         'R' => 
         array (
@@ -166,6 +170,7 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         ),
         'E' => 
         array (
+            'Elliptic\\' => 9,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -188,6 +193,8 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'BN\\' => 3,
+            'BI\\' => 3,
         ),
         'A' => 
         array (
@@ -201,11 +208,15 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
         ),
+        'phpseclib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'kornrunner\\Ethereum\\' => 
         array (
@@ -213,7 +224,9 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         ),
         'kornrunner\\' => 
         array (
-            0 => __DIR__ . '/..' . '/kornrunner/keccak/src',
+            0 => __DIR__ . '/..' . '/kornrunner/ethereum-offline-raw-tx/src',
+            1 => __DIR__ . '/..' . '/kornrunner/keccak/src',
+            2 => __DIR__ . '/..' . '/kornrunner/secp256k1/src',
         ),
         'ccxt_async\\' => 
         array (
@@ -230,6 +243,10 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Web3p\\RLP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/web3p/rlp/src',
         ),
         'Tochka\\JsonRpcSmd\\' => 
         array (
@@ -351,6 +368,10 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'SWeb3\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/drlecks/simple-web3-php/Core',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -373,8 +394,8 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -497,6 +518,10 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         array (
             0 => __DIR__ . '/..' . '/fgrosse/phpasn1/lib',
         ),
+        'Elliptic\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simplito/elliptic-php/lib',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -523,8 +548,8 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         ),
         'Denpa\\Bitcoin\\' => 
         array (
-            0 => __DIR__ . '/..' . '/denpa/php-bitcoinrpc/src',
-            1 => __DIR__ . '/..' . '/denpa/laravel-bitcoinrpc/src',
+            0 => __DIR__ . '/..' . '/denpa/laravel-bitcoinrpc/src',
+            1 => __DIR__ . '/..' . '/denpa/php-bitcoinrpc/src',
         ),
         'DeepCopy\\' => 
         array (
@@ -550,6 +575,14 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'BN\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simplito/bn-php/lib',
+        ),
+        'BI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simplito/bigint-wrapper-php/lib',
+        ),
         'Asm89\\Stack\\' => 
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
@@ -571,6 +604,7 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
     );
 
     public static $classMap = array (
+        'App\\Console\\Commands\\ListingUSDTCron' => __DIR__ . '/../..' . '/app/Console/Commands/ListingUSDTCron.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Admin\\AdminDashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/AdminDashboardController.php',
@@ -609,6 +643,8 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'App\\Models\\InternalTradeSellList' => __DIR__ . '/../..' . '/app/Models/InternalTradeSellList.php',
         'App\\Models\\InternalWallet' => __DIR__ . '/../..' . '/app/Models/InternalWallet.php',
         'App\\Models\\MarketingCampain' => __DIR__ . '/../..' . '/app/Models/MarketingCampain.php',
+        'App\\Models\\MasterLoad' => __DIR__ . '/../..' . '/app/Models/MasterLoad.php',
+        'App\\Models\\SuperLoad' => __DIR__ . '/../..' . '/app/Models/SuperLoad.php',
         'App\\Models\\TradingPair' => __DIR__ . '/../..' . '/app/Models/TradingPair.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
@@ -619,6 +655,9 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'BI\\BigInteger' => __DIR__ . '/..' . '/simplito/bigint-wrapper-php/lib/BigInteger.php',
+        'BN\\BN' => __DIR__ . '/..' . '/simplito/bn-php/lib/BN.php',
+        'BN\\Red' => __DIR__ . '/..' . '/simplito/bn-php/lib/Red.php',
         'BitcoindTest' => __DIR__ . '/..' . '/denpa/laravel-bitcoinrpc/tests/BitcoindTest.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -934,6 +973,25 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'Elliptic\\Curve\\BaseCurve' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/BaseCurve.php',
+        'Elliptic\\Curve\\BaseCurve\\Point' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/BaseCurve/Point.php',
+        'Elliptic\\Curve\\EdwardsCurve' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/EdwardsCurve.php',
+        'Elliptic\\Curve\\EdwardsCurve\\Point' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/EdwardsCurve/Point.php',
+        'Elliptic\\Curve\\MontCurve' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/MontCurve.php',
+        'Elliptic\\Curve\\MontCurve\\Point' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/MontCurve/Point.php',
+        'Elliptic\\Curve\\PresetCurve' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/PresetCurve.php',
+        'Elliptic\\Curve\\ShortCurve' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/ShortCurve.php',
+        'Elliptic\\Curve\\ShortCurve\\JPoint' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/ShortCurve/JPoint.php',
+        'Elliptic\\Curve\\ShortCurve\\Point' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curve/ShortCurve/Point.php',
+        'Elliptic\\Curves' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Curves.php',
+        'Elliptic\\EC' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/EC.php',
+        'Elliptic\\EC\\KeyPair' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/EC/KeyPair.php',
+        'Elliptic\\EC\\Signature' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/EC/Signature.php',
+        'Elliptic\\EdDSA' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/EdDSA.php',
+        'Elliptic\\EdDSA\\KeyPair' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/EdDSA/KeyPair.php',
+        'Elliptic\\EdDSA\\Signature' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/EdDSA/Signature.php',
+        'Elliptic\\HmacDRBG' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/HmacDRBG.php',
+        'Elliptic\\Utils' => __DIR__ . '/..' . '/simplito/elliptic-php/lib/Utils.php',
         'FG\\ASN1\\ASNObject' => __DIR__ . '/..' . '/fgrosse/phpasn1/lib/ASN1/ASNObject.php',
         'FG\\ASN1\\AbstractString' => __DIR__ . '/..' . '/fgrosse/phpasn1/lib/ASN1/AbstractString.php',
         'FG\\ASN1\\AbstractTime' => __DIR__ . '/..' . '/fgrosse/phpasn1/lib/ASN1/AbstractTime.php',
@@ -4579,6 +4637,11 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
         'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
+        'SWeb3\\ABI' => __DIR__ . '/..' . '/drlecks/simple-web3-php/Core/ABI.php',
+        'SWeb3\\Accounts' => __DIR__ . '/..' . '/drlecks/simple-web3-php/Core/Accounts.php',
+        'SWeb3\\SWeb3' => __DIR__ . '/..' . '/drlecks/simple-web3-php/Core/SWeb3.php',
+        'SWeb3\\SWeb3_Contract' => __DIR__ . '/..' . '/drlecks/simple-web3-php/Core/SWeb3_Contract.php',
+        'SWeb3\\Utils' => __DIR__ . '/..' . '/drlecks/simple-web3-php/Core/Utils.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -4767,6 +4830,7 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'SebastianBergmann\\Type\\NeverType' => __DIR__ . '/..' . '/sebastian/type/src/type/NeverType.php',
         'SebastianBergmann\\Type\\NullType' => __DIR__ . '/..' . '/sebastian/type/src/type/NullType.php',
         'SebastianBergmann\\Type\\ObjectType' => __DIR__ . '/..' . '/sebastian/type/src/type/ObjectType.php',
+        'SebastianBergmann\\Type\\Parameter' => __DIR__ . '/..' . '/sebastian/type/src/Parameter.php',
         'SebastianBergmann\\Type\\ReflectionMapper' => __DIR__ . '/..' . '/sebastian/type/src/ReflectionMapper.php',
         'SebastianBergmann\\Type\\RuntimeException' => __DIR__ . '/..' . '/sebastian/type/src/exception/RuntimeException.php',
         'SebastianBergmann\\Type\\SimpleType' => __DIR__ . '/..' . '/sebastian/type/src/type/SimpleType.php',
@@ -5626,6 +5690,9 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'Tochka\\JsonRpcSmd\\SmdSimpleObject' => __DIR__ . '/..' . '/tochka-developers/jsonrpc-smd/src/SmdSimpleObject.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'Web3p\\RLP\\RLP' => __DIR__ . '/..' . '/web3p/rlp/src/RLP.php',
+        'Web3p\\RLP\\Types\\Numeric' => __DIR__ . '/..' . '/web3p/rlp/src/Types/Numeric.php',
+        'Web3p\\RLP\\Types\\Str' => __DIR__ . '/..' . '/web3p/rlp/src/Types/Str.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
@@ -5925,7 +5992,14 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'ccxt\\zipmex' => __DIR__ . '/..' . '/ccxt/ccxt/php/zipmex.php',
         'ccxt\\zonda' => __DIR__ . '/..' . '/ccxt/ccxt/php/zonda.php',
         'kornrunner\\Ethereum\\Address' => __DIR__ . '/..' . '/kornrunner/ethereum-address/src/Address.php',
+        'kornrunner\\Ethereum\\Transaction' => __DIR__ . '/..' . '/kornrunner/ethereum-offline-raw-tx/src/Ethereum/Transaction.php',
         'kornrunner\\Keccak' => __DIR__ . '/..' . '/kornrunner/keccak/src/Keccak.php',
+        'kornrunner\\Secp256k1' => __DIR__ . '/..' . '/kornrunner/secp256k1/src/Secp256k1.php',
+        'kornrunner\\Serializer\\HexPrivateKeySerializer' => __DIR__ . '/..' . '/kornrunner/secp256k1/src/Serializer/HexPrivateKeySerializer.php',
+        'kornrunner\\Serializer\\HexSignatureSerializer' => __DIR__ . '/..' . '/kornrunner/secp256k1/src/Serializer/HexSignatureSerializer.php',
+        'kornrunner\\Signature\\Signature' => __DIR__ . '/..' . '/kornrunner/secp256k1/src/Signature/Signature.php',
+        'kornrunner\\Signature\\SignatureInterface' => __DIR__ . '/..' . '/kornrunner/secp256k1/src/Signature/SignatureInterface.php',
+        'kornrunner\\Signature\\Signer' => __DIR__ . '/..' . '/kornrunner/secp256k1/src/Signature/Signer.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
@@ -6022,16 +6096,40 @@ class ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
+        'phpseclib\\Crypt\\AES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
+        'phpseclib\\Crypt\\Base' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
+        'phpseclib\\Crypt\\Blowfish' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php',
+        'phpseclib\\Crypt\\DES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/DES.php',
+        'phpseclib\\Crypt\\Hash' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Hash.php',
+        'phpseclib\\Crypt\\RC2' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/RC2.php',
+        'phpseclib\\Crypt\\RC4' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/RC4.php',
+        'phpseclib\\Crypt\\RSA' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/RSA.php',
+        'phpseclib\\Crypt\\Random' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Random.php',
+        'phpseclib\\Crypt\\Rijndael' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Rijndael.php',
+        'phpseclib\\Crypt\\TripleDES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
+        'phpseclib\\Crypt\\Twofish' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
+        'phpseclib\\File\\ANSI' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
+        'phpseclib\\File\\ASN1' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
+        'phpseclib\\File\\ASN1\\Element' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ASN1/Element.php',
+        'phpseclib\\File\\X509' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/X509.php',
+        'phpseclib\\Math\\BigInteger' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Math/BigInteger.php',
+        'phpseclib\\Net\\SCP' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SCP.php',
+        'phpseclib\\Net\\SFTP' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SFTP.php',
+        'phpseclib\\Net\\SFTP\\Stream' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SFTP/Stream.php',
+        'phpseclib\\Net\\SSH1' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SSH1.php',
+        'phpseclib\\Net\\SSH2' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Net/SSH2.php',
+        'phpseclib\\System\\SSH\\Agent' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
+        'phpseclib\\System\\SSH\\Agent\\Identity' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent/Identity.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit1b804de8e8ebed35ace3f268ab061b18::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita31df1a16318e01f90c16d1edb900431::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita31df1a16318e01f90c16d1edb900431::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita31df1a16318e01f90c16d1edb900431::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInita31df1a16318e01f90c16d1edb900431::$classMap;
 
         }, null, ClassLoader::class);
     }
