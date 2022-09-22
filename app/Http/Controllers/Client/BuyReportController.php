@@ -31,31 +31,13 @@ class BuyReportController extends Controller
                 ->join('global_user_lists', 'internal_trade_buy_lists.global_user_id', '=', 'global_user_lists.id')
                 ->join('users', 'global_user_lists.user_id', '=', 'users.id')
                 ->join('master_loads as a', 'a.trade_id', '=', 'internal_trade_buy_lists.id')
-                ->join('internal_wallets as b', 'b.id', '=', 'internal_trade_buy_lists.internal_treasury_wallet_id')
-                ->select('internal_trade_buy_lists.*', 'users.email','global_user_lists.user_id', 'global_user_lists.user_type', 'a.id as masterload_id', 'b.wallet_address')
+                ->join('master_loads as b', 'b.trade_type', '=', 1)
+                ->select('internal_trade_buy_lists.*', 'users.email','global_user_lists.user_id', 'global_user_lists.user_type')
                 ->where('users.id', $user_id)
-                ->where('a.trade_type', 1)
                 ->get()->toArray();
-        return view('zenix.client.buyReport', compact('page_title', 'page_description', 'action', 'result'));
-    }
-
-    public function masterload_report($masterload_id = null){
-        $page_title = __('locale.masterload_report');
-        $page_description = 'Some description for the page';
-        $action = 'report';
-        $result = DB::table('master_loads')
-        ->join('internal_wallets as b', 'b.id', '=', 'master_loads.internal_treasury_wallet_id')
-        ->select('master_loads.*', 'b.wallet_address')
-        ->where('master_loads.id', $masterload_id)
-        ->get()->toArray();
-        return view('zenix.client.masterload_report', compact('page_title', 'page_description', 'action', 'result'));
-    }
-    public function superload_report($masterload_id = null){
-        $page_title = __('locale.super_load_report');
-        $page_description = 'Some description for the page';
-        $action = 'report';
-        $result = SuperLoad::where('masterload_id', $masterload_id)->where('trade_type', 1)->get()->toArray();
-        return view('zenix.client.superload_report', compact('page_title', 'page_description', 'action', 'result'));
+        print_r($result);
+        exit;
+        return view('zenix.client.buyReport', compact('page_title', 'page_description', 'action'));
     }
 }
 

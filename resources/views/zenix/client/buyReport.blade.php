@@ -30,6 +30,7 @@
                         <table id="example7" class="display" style="min-width: 845px">
                             <thead>
                                 <tr>
+                                    <th>{{__('locale.num')}}</th>
                                     <th>{{__('locale.time_stamp')}}</th>
                                     <th>{{__('locale.asset_class_purchase')}}</th>
                                     <th>{{__('locale.buy_amount_in_coins')}}</th>
@@ -42,41 +43,6 @@
                                     <th>{{__('locale.status')}}</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach ($result as $value)
-								<tr>
-									<td>{{$value->updated_at}}</td>
-                                    <td>
-                                        <?php echo $value->asset_purchased == 1? "BTC":"USDT" ?>
-                                    </td>
-                                    <td>{{$value->buy_amount}}</td>
-                                    <td>{{$value->delivered_address}}</td>
-                                    <td>{{$value->pay_with}}</td>
-                                    <td>{{$value->wallet_address}}</td>
-                                    <td><?php echo $value->pay_method == 1? "USDT":"Bank" ?></td>
-                                    <td>{{$value->transaction_description}}</td>
-                                    <td>
-										<a href="{!! url('/masterload_report_buy/'.$value->masterload_id); !!}">View Masterload</a> 
-                                    </td>
-                                    <td>
-										@switch($value->state)
-                                            @case (0)
-                                                <span class="badge light badge-info">Ordered</span>
-                                                @break
-                                            @case (1)
-                                                <span class="badge light badge-secondary">Master Load</span>
-                                                @break
-                                            @case (2)
-                                                <span class="badge light badge-primary">Super Load</span>
-                                                @break
-                                            @case (3)
-                                                <span class="badge light badge-success">Complete</span>
-                                                @break
-                                        @endswitch
-                                    </td>
-                                </tr>
-								@endforeach
-                            </tbody>
                         </table>
                     </div>
                 </div>
