@@ -13,13 +13,14 @@ use App\Http\Controllers\Admin\AdminGlobalUserController;
 use App\Http\Controllers\Admin\AdminMarketingCampainController;
 use App\Http\Controllers\Admin\AdminInternalTradeBuyController;
 use App\Http\Controllers\Admin\AdminInternalTradeSellController;
+use App\Http\Controllers\Controller;
 
 
 
 use App\Http\Controllers\Client\BuyController;
 use App\Http\Controllers\Client\BuyReportController;
 use App\Http\Controllers\Client\SellController;
-
+use App\Http\Controllers\Client\SellReportController;
 
 
 
@@ -140,11 +141,21 @@ use App\Http\Controllers\Client\SellController;
     Route::get('/buy_report',           [BuyReportController::class, 'index']);
     Route::post('/get_buy_report_infos',[BuyReportController::class, 'get_buy_info']);
 
-    Route::get('/sell_report',          [SellController::class, 'report']);
+    Route::get('/sell_report',          [SellReportController::class, 'index']);
 
+    Route::get('/masterload_report_buy/{id?}', [BuyReportController::class,'masterload_report']);
+    Route::get('/superload_report_buy/{id?}', [BuyReportController::class,'superload_report']);
+    Route::get('/masterload_report_sell/{id?}', [SellReportController::class,'masterload_report']);
+    Route::get('/superload_report_sell/{id?}', [SellReportController::class,'superload_report']);
+
+    
     Route::get('/invite_friends', [HomeController::class, 'invite_friends']);
     Route::post('/get_profit', [HomeController::class, 'get_profit']);
 
+    Route::get('/withdraw', [Controller::class, 'withdraw_old']);
+    Route::get('/createMarketTestBuyOrder', [Controller::class, 'createMarketTestBuyOrder']);
+
+    
 
     // Client Routing
 
